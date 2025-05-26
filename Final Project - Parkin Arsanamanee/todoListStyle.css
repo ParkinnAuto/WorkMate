@@ -1,0 +1,327 @@
+:root{
+    --lightGreen: rgb(134, 255, 134);
+    --darkGreen: rgb(38, 253, 38) ;
+    --grey:rgb(164, 164, 164);
+}
+
+
+body{
+    padding: 0rem;
+    margin: 0rem;
+    height: 100vh;
+}
+
+#headerName{
+    text-align: left;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: bold;
+    padding-top: 3rem;
+    padding-left: 3rem;
+    font-size: 3rem;
+}
+
+.header {
+    background-color: #ffffff; 
+    padding: 20px 40px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.header-content {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+#headerName {
+    margin: 0; 
+    font-size: 3rem; 
+}
+
+.header-buttons {
+    display: flex; 
+    gap: 10px; 
+}
+
+.header-button {
+    padding: 10px 20px; 
+    font-size: 1rem; 
+    background-color: #6c5ce7; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+    margin-top: 2.5rem;
+}
+
+.header-button:hover {
+    background-color: #5a4ec9; 
+}
+
+#seperateHeaderLine{
+    margin-left: 0rem; 
+    margin-bottom: 2rem;
+    border: none; /* Remove default styling */
+    height: 0.2rem; 
+    background-color: var(--grey); 
+}
+
+#addTaskButton{
+    margin-left: 3rem;
+    background-color: var(--lightGreen);
+    color: black; 
+    border: none; 
+    border-radius: 2rem; 
+    border-style: solid; /*Line style of the button*/
+    cursor: pointer; /*เวลาเอาเม้าส์ไปที่ปุ้ม เม้าส์จะเปลี่ยนเป็นรูปมือ*/
+    width: 3rem;
+    height: 3rem;
+    font-size: 5 rem;
+}
+
+#addTaskButton:hover {
+    background-color: var(--darkGreen);
+}
+
+
+.sort{
+    display: flex;
+    flex-direction: horizontal;
+    margin-top: 1rem;
+}
+
+#sortButton{
+    margin-left: 70rem;
+    border: none;
+    font-style: bold;
+    background-color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+#sortPicture{
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: 1rem;
+}
+
+.bottomContents{
+    display:flex;
+    flex-direction: horizontal;
+}
+
+#bottomContentsCheckAll{
+    border: none;
+    cursor: pointer;
+    background-color: white;
+    margin-left: 3rem;
+}
+
+#bottomContentsActivitiesLeft{
+    margin-left: 63rem;
+}
+
+.modal{
+    display:none;
+    position: fixed; /* Stay in place */
+    z-index: 1000;
+    left: 0;
+    top: 0; /*ส่งไปอยู่ด้านบนสุดของจอ*/
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modalContent {
+    background-color: #fefefe;
+    margin: 15rem;
+    margin-top: 10rem;
+    padding: 3rem;
+    border: 10px solid #000000;
+    width: auto; 
+}
+
+.sortModal {
+    display: none;
+    position: fixed; /* Stay in place แท็กตัวอื่นสามารถทะลุผ่านได้*/
+    z-index: 1000;
+    left: 0;
+    top: 0; /*ส่งไปอยู่ด้านบนสุดของจอ*/
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.sortModalContent {
+    background-color: #fefefe;
+    margin: 15rem;
+    margin-top: 10rem;
+    padding: 3rem;
+    border: 10px solid #000000;
+    width: auto; 
+}
+
+#sort {
+    text-align: center;
+    font-size: 3rem;
+}
+
+#ascending{
+    font-size: 2rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+#ascending:hover{
+    color: red;
+}
+
+#decending {
+    font-size: 2rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+#decending:hover{
+    color: red;
+}
+
+.sortCloseButton {
+    cursor: pointer;
+    color: #000000;
+    float: right;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.closeButton{
+    cursor: pointer;
+    color: #000000;
+    float: right;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.closeButton:hover{
+    color:red;
+}
+
+#newTask{
+    text-align: center;
+    font-size: 2rem;
+}
+
+#taskInput{
+    width: 80%; /*width of the box according to the modal*/
+    max-width: 400px;
+    padding: 10px;
+    margin: 1rem auto;
+    align-items: center; 
+    border: 2px solid #ccc; 
+    border-radius: 4px; 
+    display: block; 
+}
+
+#taskInput:focus {
+    border-color: var(--darkGreen); 
+    outline: none; 
+}
+
+#detailInput{
+    width: 80%; 
+    max-width: 400px;
+    padding: 10px;
+    margin: 1rem auto;
+    align-items: center; 
+    border: 2px solid #ccc; 
+    border-radius: 4px; 
+    display: block; 
+}
+
+#detailInput:focus {
+    border-color: var(--darkGreen); /* Change border color on focus */
+    outline: none; 
+}
+
+#deadlineInput {
+    width: 80%; /*width of the box according to the modal*/
+    max-width: 400px;
+    padding: 10px;
+    margin: 1rem auto;
+    justify-content: center; 
+    border: 2px solid #ccc; 
+    border-radius: 4px; 
+    display: block; 
+}
+
+#deadlineInput:focus {
+    border-color: var(--darkGreen); /* Change border color on focus */
+    outline: none;
+}
+
+#confirmAddButton{
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 1rem;
+    padding: 0.7rem;
+    font-weight: bold;
+    background-color: rgb(255, 255, 255);
+    width: 80%; 
+    max-width: 100px; 
+    margin: 2.5rem auto; /* Center the button with auto margins */
+    display: block; 
+}
+
+#confirmAddButton:hover{
+    background-color: var(--darkGreen);
+}
+
+#seperateFooter{
+    margin-left: 0rem; /*For moving line to the left if we want to in the future*/
+    margin-bottom: 2rem;
+    border: none; 
+    height: 0.2rem; 
+    background-color: var(--grey); 
+}
+
+#taskListItem {
+    list-style-type: none;
+    background-color: rgb(255, 255, 255);
+    margin-top: 1rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-top: 1rem
+}
+
+#taskListItem ul {
+    padding: 0%;
+    margin-top: 1rem
+}
+
+#taskListItem li {
+    background-color: #f0f8ff;
+    border: 1px solid #000000; 
+    border-radius: 4px; 
+    padding: 10px; 
+    margin: 0.3px;
+    width: 80%;
+    margin-top: 1rem
+}
+
+.completed {
+    animation: swipe-out 0.5s forwards; /* Animation for swipe effect */
+    opacity: 0; /* Fade out effect */
+}
+
+@keyframes swipe-out {
+    0% {
+        transform: translateX(0); /* Starting position */
+    }
+    100% {
+        transform: translateX(100%); /* Move the item out to the right */
+    }
+}

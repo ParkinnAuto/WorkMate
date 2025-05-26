@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="todoListStyle.css">
+    <script src = "todoListScript.js" defer></script>
+    <title>WorkMate - Todo List</title>
+</head>
+
+<body>
+    <section class="header">
+        <div class="header-content">
+            <h1 id="headerName">To-do List</h1>
+            <div class="header-buttons">
+                <button class="header-button" onclick="window.location.href='calendar.html'">Calendar</button>
+                <button class="header-button" onclick="window.location.href='Notes.html'">Notes</button>
+                <button class="header-button" onclick="window.location.href='weather.html'">Weather</button>
+                <button class="header-button" onclick="window.location.href='calculator.html'">Calculator</button>
+            </div>
+        </div>
+    </section>
+
+    <div class = "seperateHeader">
+        <hr id = "seperateHeaderLine">
+    </div>
+
+
+
+    <section>
+        <div class="addTask">
+            <button id = "addTaskButton"> + </button>
+        </div>
+    </section>
+
+    <section>
+        <span class = "sort">
+            <span>
+            <button id = "sortButton"> sort </button>
+            </span>
+            <span>
+            <img src="sortPic.png" alt="sortPicture" id="sortPicture">
+            </span>
+        </span>
+    </section>
+
+    <!-- Section to display the list of tasks-->
+    <section class="classList">
+        <ul id = "taskListItem"></ul> <!-- This is where the tasks are going to display -->
+    </section>
+
+
+    <section>
+        <div class = "bottomContents">
+            <button id="bottomContentsCheckAll">Check All</button>
+
+            <div class="counter-container">
+            <p id = "bottomContentsActivitiesLeft"> Activities Left: <span>0</span></p>
+            </div>
+        </div>
+    </section>
+
+    <!--Modal for adding tasks-->
+    <div id="taskModal" class="modal">
+        <div class="sortModalContent">
+            <span class="closeButton">&times;</span>
+            <h2 id = "newTask">Add a New Task</h2>
+            <input type="text" id="taskInput" placeholder="Type your task here" required>
+            <input type="text" id="detailInput" placeholder="Input details" required>
+            <input type="date" id="deadlineInput" placeholder="Input deadline" required>
+            <button id="confirmAddButton">Add Task</button>
+        </div>
+    </div>
+
+    <!--Modal for sort-->
+    <div id="sortModal" class="sortModal">
+        <div class="sortModalContent">
+            <span class="sortCloseButton">&times;</span>
+            <h2 id = "sort">Sort By:</h2>
+            <div>
+                <p id="ascending"> Latest </p>
+                <p id="decending"> Oldest </p>
+            </div>
+        </div>
+    </div>
+
+    <hr id = "seperateFooter">
+
+</body>
+
+<footer></footer>
+</html>

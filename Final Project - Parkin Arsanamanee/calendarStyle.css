@@ -1,0 +1,83 @@
+body {
+    background: linear-gradient(to right, #fce38a, #f38181);
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 1rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); 
+}
+
+.Title {
+    text-align: center;
+}
+
+.month {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.previous, .next {
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.onTopDate {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    background: #e0e0e0;
+    border-radius: 5px;
+    padding: 10px 0;
+}
+
+.days div {
+    padding: 10px 0;
+    font-weight: bold;
+}
+
+.dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 10px;
+    margin-top: 1rem;
+}
+
+.date {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    padding: 15px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.date:hover {
+    background-color: #ffc430;
+}
+
+.prev-date {
+    color: #aaa; /* Style for previous month's dates */
+}
+
+.current-date {
+    background-color: yellow; /* Highlight current date with yellow */
+    font-weight: bold; /* Optional: make the current date bold */
+}
