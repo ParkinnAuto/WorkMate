@@ -1,4 +1,3 @@
-# WorkMate
 <h1>WorkMate Website </h1>
 
 The WorkMate website offers tools designed to enhance productivity. Its main feature is the To-do List, which helps users remember their tasks. Additionally, the website includes a Calendar, Notes, Weather, and a Calculator for users to utilize.
